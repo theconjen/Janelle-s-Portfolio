@@ -48,8 +48,16 @@
         "text": "An early-stage AI startup with strong products and no marketing function. Build the brand — and the department — from a blank page."
       },
       {
-        "label": "The work",
-        "text": "Own end-to-end brand and go-to-market across two product lines, reporting directly to the CEO. Built the messaging architecture, ICP personas, and a multi-page competitive positioning analysis from founder interviews, then translated it into a phased product launch — private beta through public release — with defined milestones and a community-led acquisition and partnership strategy running alongside it."
+        "label": "The approach",
+        "text": "Started with structured interviews with the founder to translate vision into language a buyer would actually recognize, then built a two-layer framework separating company-level brand identity from product-level positioning, so the foundation would survive future product changes instead of needing to be rebuilt each time."
+      },
+      {
+        "label": "What I built",
+        "text": "A full messaging system and founder-native positioning for the flagship product, an AI-powered founder outreach tool, plus a multi-page competitive positioning analysis mapping it against the category's two extremes: fully manual outreach and volume-based sales automation. Built three ICP personas, a phased waitlist-to-beta-to-public launch plan with defined activation metrics, a five-pillar content calendar for daily founder-voice LinkedIn posts, three concept directions for a short product explainer video, and a referral system offering up to 100 free product credits per completed referral."
+      },
+      {
+        "label": "The engine",
+        "text": "Designed a community-led acquisition motion where the founder used the product itself to reach real technical founders for feedback, capturing every step as organic proof content. It required zero paid spend to produce the highest-trust content available: the product actually being used by its own founder, on camera, with real replies."
       },
       {
         "label": "The result",
@@ -59,7 +67,7 @@
     "quote": null,
     "images": [
       {
-        "src": "images/1788385462341-dispatch-slip-discovr.png",
+        "src": "images/1788385462341-dispatch-slip-sample.png",
         "alt": "",
         "caption": "One Pager"
       }
