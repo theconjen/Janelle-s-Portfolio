@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;1,600;1,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="theme-loader.js"></script>
 </head>
 <body>
   <header>
@@ -37,23 +38,23 @@
     <section class="wrap" style="padding-top:0">
       <div class="info-row reveal">
         <p class="label">Profile</p>
-        <p>I've spent my career building audiences from scratch: leading marketing for a global broadcast network, founding and launching my own community app solo, and now serving as the first marketing hire at an early-stage AI startup. My faith shapes how I work — with honesty, care for people, and follow-through.</p>
+        <p id="about-profile"></p>
       </div>
       <div class="info-row reveal">
         <p class="label">Focus</p>
-        <p>Brand strategy &amp; positioning · 0→1 product launches · founding-marketer roles for consumer and prosumer products</p>
+        <p id="about-focus"></p>
       </div>
       <div class="info-row reveal">
         <p class="label">Languages</p>
-        <p>English, Arabic, Chaldean</p>
+        <p id="about-languages"></p>
       </div>
       <div class="info-row reveal">
         <p class="label">Learning</p>
-        <p>CAPM certification (in progress, PMI) · shipping products with AI-assisted development workflows</p>
+        <p id="about-learning"></p>
       </div>
       <div class="info-row reveal">
         <p class="label">Based</p>
-        <p>Rochester, Michigan</p>
+        <p id="about-based"></p>
       </div>
     </section>
 
@@ -61,53 +62,7 @@
       <div class="wrap">
         <p class="eyebrow reveal">Skills</p>
         <h2 class="section-title reveal">What I bring to a small team.</h2>
-        <div class="skills-grid">
-          <div class="skill-col reveal">
-            <h4>Brand &amp; Positioning</h4>
-            <ul>
-              <li>Brand strategy</li>
-              <li>Messaging architecture</li>
-              <li>Voice &amp; naming</li>
-              <li>Competitive positioning</li>
-            </ul>
-          </div>
-          <div class="skill-col reveal">
-            <h4>Growth &amp; GTM</h4>
-            <ul>
-              <li>Go-to-market strategy</li>
-              <li>Partnership strategy</li>
-              <li>Audience &amp; persona work</li>
-              <li>Launch planning</li>
-            </ul>
-          </div>
-          <div class="skill-col reveal">
-            <h4>Execution &amp; Craft</h4>
-            <ul>
-              <li>Content &amp; social</li>
-              <li>Paid media</li>
-              <li>Copywriting</li>
-              <li>Design direction</li>
-            </ul>
-          </div>
-          <div class="skill-col reveal">
-            <h4>AI &amp; Technical</h4>
-            <ul>
-              <li>AI-assisted workflows</li>
-              <li>Full-stack app shipping</li>
-              <li>App Store launch</li>
-              <li>Web &amp; landing pages</li>
-            </ul>
-          </div>
-          <div class="skill-col reveal">
-            <h4>Leadership &amp; Ops</h4>
-            <ul>
-              <li>First-marketer operating</li>
-              <li>Cross-functional work</li>
-              <li>Donor &amp; stakeholder comms</li>
-              <li>Project management</li>
-            </ul>
-          </div>
-        </div>
+        <div class="skills-grid" id="skills-grid"></div>
       </div>
     </section>
 
@@ -153,5 +108,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="render-about.js"></script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+{
+  "profile": "I've spent my career building audiences from scratch: leading marketing for a global broadcast network, founding and launching my own community app solo, and now serving as the first marketing hire at an early-stage AI startup. My faith shapes how I work — with honesty, care for people, and follow-through.",
+  "focus": "Brand strategy & positioning · 0→1 product launches · founding-marketer roles for consumer and prosumer products",
+  "languages": "English, Arabic, Chaldean",
+  "learning": "CAPM certification (in progress, PMI) · HubSpot certified in Content Marketing, Digital Marketing, Social Media Marketing & Marketing Hub Software · shipping products with AI-assisted development workflows (Claude Code, Anthropic API)",
+  "based": "Rochester, Michigan",
+  "skills": [
+    {
+      "title": "Brand & Positioning",
+      "items": ["Brand strategy", "Messaging architecture", "Voice & naming", "Competitive positioning"]
+    },
+    {
+      "title": "Growth & GTM",
+      "items": ["Go-to-market strategy", "Partnership strategy", "Audience & persona work", "Launch planning"]
+    },
+    {
+      "title": "Execution & Craft",
+      "items": ["Content & social", "Paid media", "Copywriting", "Design direction"]
+    },
+    {
+      "title": "AI & Technical",
+      "items": ["AI-assisted workflows", "Full-stack app shipping", "App Store launch", "Web & landing pages"]
+    },
+    {
+      "title": "Leadership & Ops",
+      "items": ["First-marketer operating", "Cross-functional work", "Donor & stakeholder comms", "Project management"]
+    }
+  ]
+}

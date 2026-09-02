@@ -23,3 +23,9 @@ const io = new IntersectionObserver(
   { threshold: 0.12 }
 );
 document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+// Called by render-*.js after injecting dynamic content, so newly added
+// .reveal elements (case studies, post cards, etc.) get observed too.
+window.reinitReveal = function () {
+  document.querySelectorAll(".reveal:not(.in)").forEach((el) => io.observe(el));
+};

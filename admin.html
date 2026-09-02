@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Admin — Janelle Selou</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;1,600;1,700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body class="admin-body">
+
+  <header>
+    <nav class="nav">
+      <a href="index.html" class="nav-name">JANELLE SELOU <span>/</span> ADMIN</a>
+      <ul class="nav-links">
+        <li><a href="index.html">← Back to site</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="wrap admin-wrap">
+
+    <section id="gate" class="admin-card">
+      <p class="eyebrow">Connect</p>
+      <h1 class="section-title" style="font-size:2rem">Sign in with your GitHub token</h1>
+      <p style="color:var(--ink-soft); max-width:60ch; margin-bottom:1.25rem">
+        Paste the fine-grained GitHub token scoped to <strong>Janelle-s-Portfolio</strong> with Contents: Read and write.
+        It's saved only in this browser (localStorage) — never sent anywhere but GitHub's API.
+      </p>
+      <input id="token-input" type="password" placeholder="github_pat_..." class="admin-input" style="max-width:480px" />
+      <button id="connect-btn" class="admin-btn">Connect</button>
+      <p id="gate-error" class="admin-error"></p>
+    </section>
+
+    <section id="app" class="hidden">
+      <div class="admin-toprow">
+        <p class="eyebrow" style="margin:0">Connected as <span id="who"></span></p>
+        <button id="logout-btn" class="admin-btn admin-btn-ghost">Log out</button>
+      </div>
+
+      <div class="admin-tabs">
+        <button class="admin-tab active" data-tab="theme">Theme</button>
+        <button class="admin-tab" data-tab="work">Work</button>
+        <button class="admin-tab" data-tab="writing">Writing</button>
+        <button class="admin-tab" data-tab="about">About</button>
+      </div>
+
+      <!-- THEME -->
+      <div class="admin-panel active" id="panel-theme">
+        <h2 class="section-title" style="font-size:1.6rem">Colors &amp; Fonts</h2>
+        <p style="color:var(--ink-soft); margin-bottom:1.5rem">Changes apply across the whole site. Fonts must be a real <a href="https://fonts.google.com" target="_blank" rel="noopener">Google Fonts</a> name (e.g. "Playfair Display", "Inter").</p>
+        <div class="admin-grid-2" id="theme-form"></div>
+        <button class="admin-btn" id="save-theme">Save Theme</button>
+        <span class="admin-status" id="status-theme"></span>
+      </div>
+
+      <!-- WORK -->
+      <div class="admin-panel" id="panel-work">
+        <h2 class="section-title" style="font-size:1.6rem">Work / Case Studies</h2>
+        <div id="work-items"></div>
+        <button class="admin-btn admin-btn-ghost" id="add-work-item">+ Add case study</button>
+        <div style="margin-top:1.5rem">
+          <button class="admin-btn" id="save-work">Save Work Page</button>
+          <span class="admin-status" id="status-work"></span>
+        </div>
+      </div>
+
+      <!-- WRITING -->
+      <div class="admin-panel" id="panel-writing">
+        <h2 class="section-title" style="font-size:1.6rem">Writing / Blog Posts</h2>
+        <p style="color:var(--ink-soft); margin-bottom:1rem">In the body field: separate paragraphs with a blank line. Start a line with <code>## </code> to make it a heading.</p>
+        <div id="writing-items"></div>
+        <button class="admin-btn admin-btn-ghost" id="add-writing-item">+ Add post</button>
+        <div style="margin-top:1.5rem">
+          <button class="admin-btn" id="save-writing">Save Writing</button>
+          <span class="admin-status" id="status-writing"></span>
+        </div>
+      </div>
+
+      <!-- ABOUT -->
+      <div class="admin-panel" id="panel-about">
+        <h2 class="section-title" style="font-size:1.6rem">About Page Text</h2>
+        <div class="admin-field">
+          <label>Profile paragraph</label>
+          <textarea id="about-profile" class="admin-input" rows="3"></textarea>
+        </div>
+        <div class="admin-field">
+          <label>Focus line</label>
+          <input id="about-focus" class="admin-input" />
+        </div>
+        <div class="admin-field">
+          <label>Languages</label>
+          <input id="about-languages" class="admin-input" />
+        </div>
+        <div class="admin-field">
+          <label>Learning / Certifications</label>
+          <input id="about-learning" class="admin-input" />
+        </div>
+        <div class="admin-field">
+          <label>Based</label>
+          <input id="about-based" class="admin-input" />
+        </div>
+        <h3 style="font-family:var(--font-display); margin:1.5rem 0 0.75rem">Skills grid</h3>
+        <div id="skills-items" class="admin-grid-2"></div>
+        <div style="margin-top:1.5rem">
+          <button class="admin-btn" id="save-about">Save About Page</button>
+          <span class="admin-status" id="status-about"></span>
+        </div>
+      </div>
+
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

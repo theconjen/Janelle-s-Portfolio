@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;1,600;1,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="theme-loader.js"></script>
 </head>
 <body>
   <header>
@@ -31,74 +32,7 @@
     </section>
 
     <section class="wrap" style="padding-top:0">
-      <article style="padding-bottom:3rem">
-        <p class="eyebrow reveal">01 — Founder</p>
-        <h2 class="section-title reveal">The Connection</h2>
-        <div class="info-row reveal">
-          <p class="label">The brief</p>
-          <p>Faith communities needed a digital home that wasn't a generic social feed. I set out to build one — alone.</p>
-        </div>
-        <div class="info-row reveal">
-          <p class="label">The work</p>
-          <p>Designed the full brand system (palette, typography, voice), then built the product end-to-end: a mobile app, web client, and backend. Communities, events, prayer requests, an apologetics library, chat, and microblogs — shipped through the App Store as a solo founder.</p>
-        </div>
-        <div class="info-row reveal">
-          <p class="label">The result</p>
-          <p>1,000+ organic downloads with zero paid acquisition — growth driven entirely by brand, community, and content.</p>
-        </div>
-        <blockquote class="pullquote reveal">
-          “Built for believers. No ads. No algorithms.”
-          <cite>The brand promise — read the founding story in <a href="writing-connection.html">Why I Built The Connection</a></cite>
-        </blockquote>
-        <div class="case-gallery">
-          <figure class="reveal">
-            <img src="img-deck-cover.jpg" alt="The Connection presentation cover — serif wordmark over a sage and blush gradient" loading="lazy" />
-            <figcaption>Brand system — the sage &amp; blush identity</figcaption>
-          </figure>
-          <figure class="reveal">
-            <img src="img-deck-offer.jpg" alt="Slide showing four app screens: Home, Community, Events, Apologetics" loading="lazy" />
-            <figcaption>Product story — Home, Community, Events &amp; Apologetics</figcaption>
-          </figure>
-          <figure class="reveal">
-            <img src="img-carousel.jpg" alt="Dark social campaign panel reading Less Scrolling, More Living" loading="lazy" />
-            <figcaption>Campaign design — “Less scrolling. More living.”</figcaption>
-          </figure>
-        </div>
-      </article>
-
-      <article style="padding-bottom:3rem">
-        <p class="eyebrow reveal">02 — First Marketing Hire</p>
-        <h2 class="section-title reveal">Bord Labs</h2>
-        <div class="info-row reveal">
-          <p class="label">The brief</p>
-          <p>An early-stage AI startup with strong products and no marketing function. Build the brand — and the department — from a blank page.</p>
-        </div>
-        <div class="info-row reveal">
-          <p class="label">The work</p>
-          <p>Company brand strategy and messaging architecture, product positioning, go-to-market planning, partnership strategy, competitive analysis, founder-brand content, and design direction for web and social. Onboarded the company into a leading startup accelerator during week one.</p>
-        </div>
-        <div class="info-row reveal">
-          <p class="label">The result</p>
-          <p>A complete brand and go-to-market foundation — from a 90-day playbook to live positioning, outreach systems, and launch assets.</p>
-        </div>
-      </article>
-
-      <article>
-        <p class="eyebrow reveal">03 — Marketing Director</p>
-        <h2 class="section-title reveal">Aramaic Broadcasting Network</h2>
-        <div class="info-row reveal">
-          <p class="label">The brief</p>
-          <p>A global broadcast network serving a diaspora audience across languages and platforms — grow engagement and support.</p>
-        </div>
-        <div class="info-row reveal">
-          <p class="label">The work</p>
-          <p>Led marketing 2019–2023 (rehired 2025): audience strategy, social content across platforms, paid media, and high-stakes donor relationships that funded the mission.</p>
-        </div>
-        <div class="info-row reveal">
-          <p class="label">The result</p>
-          <p>30% engagement increase and $25K+ in paid media managed — plus major-donor conversations that taught me how to sell a vision one person at a time.</p>
-        </div>
-      </article>
+      <div id="work-list"></div>
     </section>
 
     <section class="cta-band">
@@ -143,5 +77,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="render-work.js"></script>
 </body>
 </html>

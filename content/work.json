@@ -1,0 +1,77 @@
+[
+  {
+    "id": "the-connection",
+    "order": 1,
+    "eyebrow": "01 — Founder",
+    "title": "The Connection",
+    "rows": [
+      {
+        "label": "The brief",
+        "text": "Faith communities needed a digital home that wasn't a generic social feed. I set out to build one — alone."
+      },
+      {
+        "label": "The work",
+        "text": "Designed the full brand system (palette, typography, voice), then built the product end-to-end: a mobile app, web client, and backend. Communities, events, prayer requests, an apologetics library, chat, and microblogs — shipped through the App Store as a solo founder."
+      },
+      {
+        "label": "The result",
+        "text": "1,000+ organic downloads with zero paid acquisition — growth driven entirely by brand, community, and content."
+      }
+    ],
+    "quote": {
+      "text": "Built for believers. No ads. No algorithms.",
+      "citeText": "The brand promise — read the founding story in",
+      "citeLinkText": "Why I Built The Connection",
+      "citeLinkHref": "post.html?slug=a-different-kind-of-room"
+    },
+    "images": [
+      { "src": "img-deck-cover.jpg", "alt": "The Connection presentation cover — serif wordmark over a sage and blush gradient", "caption": "Brand system — the sage & blush identity" },
+      { "src": "img-deck-offer.jpg", "alt": "Slide showing four app screens: Home, Community, Events, Apologetics", "caption": "Product story — Home, Community, Events & Apologetics" },
+      { "src": "img-carousel.jpg", "alt": "Dark social campaign panel reading Less Scrolling, More Living", "caption": "Campaign design — \"Less scrolling. More living.\"" }
+    ]
+  },
+  {
+    "id": "bord-labs",
+    "order": 2,
+    "eyebrow": "02 — First Marketing Hire",
+    "title": "Bord Labs",
+    "rows": [
+      {
+        "label": "The brief",
+        "text": "An early-stage AI startup with strong products and no marketing function. Build the brand — and the department — from a blank page."
+      },
+      {
+        "label": "The work",
+        "text": "Own end-to-end brand and go-to-market across two product lines, reporting directly to the CEO. Built the messaging architecture, ICP personas, and a multi-page competitive positioning analysis from founder interviews, then translated it into a phased product launch — private beta through public release — with defined milestones and a community-led acquisition and partnership strategy running alongside it."
+      },
+      {
+        "label": "The result",
+        "text": "A complete brand and go-to-market foundation, a structured launch plan tied to activation metrics instead of vanity ones, and the company's acceptance into a leading startup accelerator during my first week on the team. A routine technical audit also caught the site's own robots.txt blocking the exact AI crawlers the product was built to help clients rank with."
+      }
+    ],
+    "quote": null,
+    "images": []
+  },
+  {
+    "id": "abn",
+    "order": 3,
+    "eyebrow": "03 — Marketing Director",
+    "title": "Aramaic Broadcasting Network",
+    "rows": [
+      {
+        "label": "The brief",
+        "text": "A global broadcast network serving a diaspora audience across languages and platforms — grow engagement and support."
+      },
+      {
+        "label": "The work",
+        "text": "Led marketing 2019–2023 (rehired 2025): audience strategy, multilingual social content across platforms, paid media, and high-stakes donor relationships that funded the mission."
+      },
+      {
+        "label": "The result",
+        "text": "30% engagement increase, $25K+ in paid media managed, and email open rates grown from 23% to 41% across a 10,000+ subscriber donor communications program — plus major-donor conversations that taught me how to sell a vision one person at a time."
+      }
+    ],
+    "quote": null,
+    "images": []
+  }
+]

@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;1,600;1,700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="theme-loader.js"></script>
 </head>
 <body>
   <header>
@@ -32,18 +33,7 @@
     </section>
 
     <section class="wrap" style="padding-top:0">
-      <div class="work-list">
-        <a class="work-card reveal" href="writing-brand.html">
-          <h3>The brand is not the paint <span class="arrow">→</span></h3>
-          <span class="tag">Essay · Brand Strategy</span>
-          <p>Founders treat brand as decoration applied at the end. It's the blueprint — the decision every other decision flows from. On language, kept promises, and building a congregation instead of an audience.</p>
-        </a>
-        <a class="work-card reveal" href="writing-connection.html">
-          <h3>A different kind of room <span class="arrow">→</span></h3>
-          <span class="tag">Essay · Founder Letter</span>
-          <p>The launch essay for The Connection — on the loneliness of being surrounded and unseen online, and why I built a platform with no ads and no algorithms.</p>
-        </a>
-      </div>
+      <div class="work-list" id="writing-list"></div>
     </section>
 
     <section class="cta-band">
@@ -88,5 +78,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script src="render-writing.js"></script>
 </body>
 </html>
