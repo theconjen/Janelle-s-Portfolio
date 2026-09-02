@@ -25,9 +25,16 @@
       "citeLinkHref": "post.html?slug=a-different-kind-of-room"
     },
     "images": [
-      { "src": "img-deck-cover.jpg", "alt": "The Connection presentation cover — serif wordmark over a sage and blush gradient", "caption": "Brand system — the sage & blush identity" },
-      { "src": "img-deck-offer.jpg", "alt": "Slide showing four app screens: Home, Community, Events, Apologetics", "caption": "Product story — Home, Community, Events & Apologetics" },
-      { "src": "img-carousel.jpg", "alt": "Dark social campaign panel reading Less Scrolling, More Living", "caption": "Campaign design — \"Less scrolling. More living.\"" }
+      {
+        "src": "img-deck-cover.jpg",
+        "alt": "The Connection presentation cover — serif wordmark over a sage and blush gradient",
+        "caption": "Brand system"
+      },
+      {
+        "src": "img-carousel.jpg",
+        "alt": "Dark social campaign panel reading Less Scrolling, More Living",
+        "caption": "Campaign design  "
+      }
     ]
   },
   {
@@ -50,7 +57,13 @@
       }
     ],
     "quote": null,
-    "images": []
+    "images": [
+      {
+        "src": "images/1788385462341-dispatch-slip-discovr.png",
+        "alt": "",
+        "caption": "One Pager"
+      }
+    ]
   },
   {
     "id": "abn",
