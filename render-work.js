@@ -54,6 +54,15 @@
         </div>`
         : '';
 
+    const download = item.download
+      ? `
+        <p class="reveal" style="margin-top:1.25rem">
+          <a href="${item.download.href}" target="_blank" rel="noopener" style="color:var(--gold); font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:600; border-bottom:1px solid var(--gold); padding-bottom:2px;">
+            ${escapeHtml(item.download.label || 'Download (PDF)')} ↓
+          </a>
+        </p>`
+      : '';
+
     return `
       <article style="padding-bottom:3rem">
         <p class="eyebrow reveal">${escapeHtml(item.eyebrow || '')}</p>
@@ -61,6 +70,7 @@
         ${rows}
         ${quote}
         ${gallery}
+        ${download}
       </article>`;
   }
 

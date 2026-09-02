@@ -281,6 +281,10 @@ function buildWorkItemCard(item, idx) {
       <div class="wi-images"></div>
       <input type="file" accept="image/*" class="wi-image-upload" />
     </div>
+    <div class="admin-field"><label>Download link (optional — e.g. a PDF work sample)</label>
+      <input class="admin-input wi-download-label" placeholder="Button label, e.g. Download the full case study (PDF)" value="${escapeHtml(item.download?.label || '')}" />
+      <input class="admin-input wi-download-href" placeholder="File path, e.g. work-samples/my-file.pdf" value="${escapeHtml(item.download?.href || '')}" />
+    </div>
   `;
 
   const rowsWrap = card.querySelector('.wi-rows');
@@ -380,6 +384,10 @@ document.getElementById('save-work').addEventListener('click', async () => {
             citeLinkText: card.querySelector('.wi-quote-link-text').value,
             citeLinkHref: card.querySelector('.wi-quote-link-href').value,
           }
+        : null;
+      const dlHref = card.querySelector('.wi-download-href').value.trim();
+      item.download = dlHref
+        ? { label: card.querySelector('.wi-download-label').value.trim() || 'Download (PDF)', href: dlHref }
         : null;
     });
     const result = await putJson('content/work.json', workItems, workSha, 'Update work page via admin');

@@ -93,6 +93,36 @@
       }
     ],
     "quote": null,
-    "images": []
+    "images": [],
+    "download": {
+      "label": "Download the full case study (PDF)",
+      "href": "work-samples/abn-case-study.pdf"
+    }
+  },
+  {
+    "id": "ai-visibility-outreach",
+    "order": 4,
+    "eyebrow": "04 — Work Sample",
+    "title": "AI-Visibility Audit Outreach",
+    "rows": [
+      {
+        "label": "The brief",
+        "text": "Sales enablement copy for a warm follow-up after an in-person conference connection, pairing a free personalized audit with a low-friction call-to-action."
+      },
+      {
+        "label": "The approach",
+        "text": "Anchor the email in a real touchpoint, lead with a specific, personalized finding rather than a pitch, and give a clear, ownable name to the gap being surfaced instead of leaning on category jargon."
+      },
+      {
+        "label": "What it shows",
+        "text": "Personalized, evidence-led outreach built around a data asset delivered before any ask is made, and a low-friction, specific close (a 30-minute walkthrough) instead of an open-ended \"let's connect.\""
+      }
+    ],
+    "quote": null,
+    "images": [],
+    "download": {
+      "label": "Read the full sample (PDF)",
+      "href": "work-samples/ai-visibility-outreach-sample.pdf"
+    }
   }
 ]
