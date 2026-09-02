@@ -278,8 +278,16 @@ function buildWorkItemCard(item, idx) {
       <input class="admin-input wi-quote-link-href" placeholder="Link URL, e.g. post.html?slug=..." value="${escapeHtml(item.quote?.citeLinkHref || '')}" />
     </div>
     <div class="admin-field"><label>Images</label>
+      <div class="admin-field" style="margin-bottom:0.5rem">
+        <label style="margin-top:0">Gallery layout</label>
+        <select class="admin-input wi-layout" style="margin:0.25rem 0">
+          <option value="grid"${(item.layout || 'grid') === 'grid' ? ' selected' : ''}>Grid (up to 3, side by side)</option>
+          <option value="carousel"${item.layout === 'carousel' ? ' selected' : ''}>Carousel (swipeable — Instagram posts, presentation decks)</option>
+        </select>
+      </div>
       <div class="wi-images"></div>
-      <input type="file" accept="image/*" class="wi-image-upload" />
+      <input type="file" accept="image/*" multiple class="wi-image-upload" />
+      <p style="font-size:0.78rem; color:var(--ink-soft); margin-top:0.35rem">You can select multiple files at once. For a carousel, upload them in the order you want them to appear \u2014 use the arrows below to reorder.</p>
     </div>
     <div class="admin-field"><label>Download link (optional — e.g. a PDF work sample)</label>
       <input class="admin-input wi-download-label" placeholder="Button label, e.g. Download the full case study (PDF)" value="${escapeHtml(item.download?.label || '')}" />
@@ -320,8 +328,20 @@ function buildWorkItemCard(item, idx) {
       row.innerHTML = `
         <img src="${img.src}" alt="" onerror="this.style.visibility='hidden'" />
         <input class="admin-input img-caption" placeholder="Caption" value="${escapeHtml(img.caption || '')}" />
+        <button class="admin-mini-btn img-up" type="button" title="Move earlier">↑</button>
+        <button class="admin-mini-btn img-down" type="button" title="Move later">↓</button>
         <button class="admin-mini-btn img-remove" type="button">✕</button>`;
       row.querySelector('.img-caption').addEventListener('input', (e) => (img.caption = e.target.value));
+      row.querySelector('.img-up').addEventListener('click', () => {
+        if (iIdx === 0) return;
+        [item.images[iIdx - 1], item.images[iIdx]] = [item.images[iIdx], item.images[iIdx - 1]];
+        renderImages();
+      });
+      row.querySelector('.img-down').addEventListener('click', () => {
+        if (iIdx === item.images.length - 1) return;
+        [item.images[iIdx + 1], item.images[iIdx]] = [item.images[iIdx], item.images[iIdx + 1]];
+        renderImages();
+      });
       row.querySelector('.img-remove').addEventListener('click', () => {
         item.images.splice(iIdx, 1);
         renderImages();
@@ -333,14 +353,16 @@ function buildWorkItemCard(item, idx) {
   renderImages();
 
   card.querySelector('.wi-image-upload').addEventListener('change', async (e) => {
-    const file = e.target.files[0];
-    if (!file) return;
-    setStatus('status-work', 'Uploading image…');
+    const files = Array.from(e.target.files || []);
+    if (!files.length) return;
+    setStatus('status-work', `Uploading ${files.length} image${files.length > 1 ? 's' : ''}…`);
     try {
-      const path = await uploadImage(file);
-      item.images.push({ src: path, alt: '', caption: '' });
+      for (const file of files) {
+        const path = await uploadImage(file);
+        item.images.push({ src: path, alt: '', caption: '' });
+      }
       renderImages();
-      setStatus('status-work', 'Image uploaded. Remember to Save.');
+      setStatus('status-work', 'Images uploaded. Remember to Save.');
     } catch (err) {
       setStatus('status-work', err.message, true);
     }
@@ -376,6 +398,7 @@ document.getElementById('save-work').addEventListener('click', async () => {
         label: r.querySelector('.row-label').value,
         text: r.querySelector('.row-text').value,
       }));
+      item.layout = card.querySelector('.wi-layout').value;
       const qText = card.querySelector('.wi-quote-text').value.trim();
       item.quote = qText
         ? {

@@ -277,3 +277,34 @@ footer { border-top: 1px solid var(--line); padding: 2.5rem 0 3rem; }
 .case-gallery figure img { width: 100%; border: 1px solid var(--line); border-radius: 6px; }
 .case-gallery figcaption { font-size: 0.8rem; color: var(--ink-soft); margin-top: 0.5rem; letter-spacing: 0.04em; }
 @media (max-width: 720px) { .case-gallery { grid-template-columns: 1fr; } }
+
+/* ---------- Carousel (Instagram-style posts, presentation decks) ---------- */
+.carousel { position: relative; overflow: hidden; border-radius: 8px; border: 1px solid var(--line); margin-top: 2rem; background: var(--paper); }
+.carousel-track { display: flex; transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1); touch-action: pan-y; }
+.carousel-slide { flex: 0 0 100%; display: flex; flex-direction: column; }
+.carousel-slide-media {
+  height: min(62vh, 560px); background: var(--sage);
+  display: flex; align-items: center; justify-content: center; overflow: hidden;
+}
+.carousel-slide-media img { max-width: 100%; max-height: 100%; width: auto; height: auto; display: block; }
+.carousel-caption { padding: 0.7rem 1rem 0.85rem; font-size: 0.85rem; color: var(--ink-soft); }
+.carousel-btn {
+  position: absolute; top: calc(min(62vh, 560px) / 2); transform: translateY(-50%);
+  width: 36px; height: 36px; border-radius: 50%; border: none; cursor: pointer;
+  background: rgba(16, 19, 17, 0.55); color: #fff; font-size: 1.1rem; line-height: 1;
+  display: flex; align-items: center; justify-content: center; transition: background 0.2s ease;
+}
+.carousel-btn:hover { background: var(--gold); }
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+.carousel-dots { display: flex; justify-content: center; gap: 6px; padding: 0.85rem 0; }
+.carousel-dots .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--line); border: none; cursor: pointer; padding: 0; }
+.carousel-dots .dot.active { background: var(--gold); }
+.carousel-counter {
+  position: absolute; top: 10px; right: 10px; background: rgba(16, 19, 17, 0.55); color: #fff;
+  font-size: 0.72rem; letter-spacing: 0.04em; padding: 0.2rem 0.55rem; border-radius: 999px;
+}
+@media (max-width: 720px) {
+  .carousel-slide-media { height: min(52vh, 420px); }
+  .carousel-btn { top: calc(min(52vh, 420px) / 2); }
+}
