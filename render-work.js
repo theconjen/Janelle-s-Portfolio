@@ -57,13 +57,18 @@
         </div>`
         : '';
 
-    const download = item.download
+    const downloads = item.downloads && item.downloads.length
       ? `
-        <p class="reveal" style="margin-top:1.25rem">
-          <a href="${item.download.href}" target="_blank" rel="noopener" style="color:var(--gold); font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:600; border-bottom:1px solid var(--gold); padding-bottom:2px;">
-            ${escapeHtml(item.download.label || 'Download (PDF)')} ↓
-          </a>
-        </p>`
+        <div class="reveal" style="margin-top:1.25rem; display:flex; flex-wrap:wrap; gap:1.5rem">
+          ${item.downloads
+            .map(
+              (dl) => `
+            <a href="${dl.href}" target="_blank" rel="noopener" style="color:var(--gold); font-size:0.85rem; letter-spacing:0.08em; text-transform:uppercase; font-weight:600; border-bottom:1px solid var(--gold); padding-bottom:2px;">
+              ${escapeHtml(dl.label || 'Download (PDF)')} ↓
+            </a>`
+            )
+            .join('')}
+        </div>`
       : '';
 
     return `
@@ -73,7 +78,7 @@
         ${rows}
         ${quote}
         ${gallery}
-        ${download}
+        ${downloads}
       </article>`;
   }
 

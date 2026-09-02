@@ -289,9 +289,9 @@ function buildWorkItemCard(item, idx) {
       <input type="file" accept="image/*" multiple class="wi-image-upload" />
       <p style="font-size:0.78rem; color:var(--ink-soft); margin-top:0.35rem">You can select multiple files at once. For a carousel, upload them in the order you want them to appear \u2014 use the arrows below to reorder.</p>
     </div>
-    <div class="admin-field"><label>Download link (optional — e.g. a PDF work sample)</label>
-      <input class="admin-input wi-download-label" placeholder="Button label, e.g. Download the full case study (PDF)" value="${escapeHtml(item.download?.label || '')}" />
-      <input class="admin-input wi-download-href" placeholder="File path, e.g. work-samples/my-file.pdf" value="${escapeHtml(item.download?.href || '')}" />
+    <div class="admin-field"><label>Download links (optional \u2014 e.g. PDF work samples)</label>
+      <div class="admin-row-list wi-downloads"></div>
+      <button class="admin-mini-btn wi-add-download" type="button">+ Add download link</button>
     </div>
   `;
 
@@ -317,6 +317,30 @@ function buildWorkItemCard(item, idx) {
   card.querySelector('.wi-add-row').addEventListener('click', () => {
     item.rows.push({ label: '', text: '' });
     renderRows(item.rows);
+  });
+
+  const downloadsWrap = card.querySelector('.wi-downloads');
+  const renderDownloads = (downloads) => {
+    downloadsWrap.innerHTML = '';
+    downloads.forEach((dl, dIdx) => {
+      const r = document.createElement('div');
+      r.className = 'admin-row-item';
+      r.innerHTML = `
+        <input class="admin-input dl-label" placeholder="Button label" value="${escapeHtml(dl.label || '')}" />
+        <input class="admin-input dl-href" placeholder="File path, e.g. work-samples/my-file.pdf" value="${escapeHtml(dl.href || '')}" />
+        <button class="admin-mini-btn dl-remove" type="button">✕</button>`;
+      r.querySelector('.dl-remove').addEventListener('click', () => {
+        downloads.splice(dIdx, 1);
+        renderDownloads(downloads);
+      });
+      downloadsWrap.appendChild(r);
+    });
+  };
+  if (!item.downloads) item.downloads = [];
+  renderDownloads(item.downloads);
+  card.querySelector('.wi-add-download').addEventListener('click', () => {
+    item.downloads.push({ label: '', href: '' });
+    renderDownloads(item.downloads);
   });
 
   const imagesWrap = card.querySelector('.wi-images');
@@ -408,10 +432,12 @@ document.getElementById('save-work').addEventListener('click', async () => {
             citeLinkHref: card.querySelector('.wi-quote-link-href').value,
           }
         : null;
-      const dlHref = card.querySelector('.wi-download-href').value.trim();
-      item.download = dlHref
-        ? { label: card.querySelector('.wi-download-label').value.trim() || 'Download (PDF)', href: dlHref }
-        : null;
+      item.downloads = Array.from(card.querySelectorAll('.wi-downloads .admin-row-item'))
+        .map((r) => ({
+          label: r.querySelector('.dl-label').value.trim(),
+          href: r.querySelector('.dl-href').value.trim(),
+        }))
+        .filter((d) => d.href);
     });
     const result = await putJson('content/work.json', workItems, workSha, 'Update work page via admin');
     workSha = result.content.sha;

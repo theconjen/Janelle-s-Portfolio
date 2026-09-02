@@ -35,7 +35,8 @@
         "alt": "Dark social campaign panel reading Less Scrolling, More Living",
         "caption": "Campaign design  "
       }
-    ]
+    ],
+    "downloads": []
   },
   {
     "id": "bord-labs",
@@ -75,7 +76,8 @@
         "alt": "",
         "caption": "One Pager"
       }
-    ]
+    ],
+    "downloads": []
   },
   {
     "id": "abn",
@@ -98,10 +100,12 @@
     ],
     "quote": null,
     "images": [],
-    "download": {
-      "label": "Download the full case study (PDF)",
-      "href": "work-samples/abn-case-study.pdf"
-    }
+    "downloads": [
+      {
+        "label": "Download the full case study (PDF)",
+        "href": "work-samples/abn-case-study.pdf"
+      }
+    ]
   },
   {
     "id": "ai-visibility-outreach",
@@ -124,9 +128,15 @@
     ],
     "quote": null,
     "images": [],
-    "download": {
-      "label": "Read the full sample (PDF)",
-      "href": "work-samples/ai-visibility-outreach-sample.pdf"
-    }
+    "downloads": [
+      {
+        "label": "Read the sales copy sample (PDF)",
+        "href": "work-samples/ai-visibility-outreach-sample.pdf"
+      },
+      {
+        "label": "See the designed email (PDF)",
+        "href": "work-samples/email-design-sample.pdf"
+      }
+    ]
   }
 ]
