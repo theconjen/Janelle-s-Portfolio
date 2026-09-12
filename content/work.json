@@ -77,7 +77,12 @@
         "caption": "One Pager"
       }
     ],
-    "downloads": []
+    "downloads": [
+      {
+        "label": "See the customer journey map (PDF)",
+        "href": "work-samples/customer-journey-map.pdf"
+      }
+    ]
   },
   {
     "id": "abn",
