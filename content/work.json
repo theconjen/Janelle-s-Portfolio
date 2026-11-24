@@ -16,6 +16,14 @@
       {
         "label": "The result",
         "text": "1,000+ organic downloads with zero paid acquisition — growth driven entirely by brand, community, and content."
+      },
+      {
+        "label": "The AI workflow",
+        "text": "Built the app on my own with Claude Code every day. To keep it consistent, I wrote Claude Skills that set API standards and debugging checklists, so each new feature followed the same rules."
+      },
+      {
+        "label": "How I checked it",
+        "text": "An engineer friend tried to break the app on purpose. I watched how the workflow reacted to each bug, then fixed the rule that missed it, not just the bug. I also used community feedback to put onboarding and retention ahead of new features."
       }
     ],
     "quote": {
@@ -36,7 +44,8 @@
         "caption": "Campaign design  "
       }
     ],
-    "downloads": []
+    "downloads": [],
+    "layout": "grid"
   },
   {
     "id": "bord-labs",
@@ -82,7 +91,8 @@
         "label": "See the customer journey map (PDF)",
         "href": "work-samples/customer-journey-map.pdf"
       }
-    ]
+    ],
+    "layout": "grid"
   },
   {
     "id": "abn",
@@ -110,7 +120,8 @@
         "label": "Download the full case study (PDF)",
         "href": "work-samples/abn-case-study.pdf"
       }
-    ]
+    ],
+    "layout": "grid"
   },
   {
     "id": "ai-visibility-outreach",
@@ -128,7 +139,7 @@
       },
       {
         "label": "What it shows",
-        "text": "Personalized, evidence-led outreach built around a data asset delivered before any ask is made, and a low-friction, specific close (a 30-minute walkthrough) instead of an open-ended \"let's connect.\""
+        "text": "Personalized, evidence-led outreach built around a data asset delivered before any ask is made, and a low-friction, specific close (a 30-minute walkthrough) instead of an open-ended "
       }
     ],
     "quote": null,
@@ -142,6 +153,7 @@
         "label": "See the designed email (PDF)",
         "href": "work-samples/email-design-sample.pdf"
       }
-    ]
+    ],
+    "layout": "grid"
   }
 ]
