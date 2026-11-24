@@ -155,5 +155,33 @@
       }
     ],
     "layout": "grid"
+  },
+  {
+    "id": "item-1795545004543",
+    "order": 5,
+    "eyebrow": "05 — GO-TO-MARKET (CONTRACT)",
+    "title": "Keepr",
+    "rows": [
+      {
+        "label": "The brief",
+        "text": "Keepr needed sales-ready marketing material, and a clear way for Sales to ask for it. I joined as a contract go-to-market activation specialist to build both."
+      },
+      {
+        "label": "The work",
+        "text": "Built the sales enablement library: an FAQ and objection-handling one-pager, a portal one-pager, and a demo walkthrough video with short clips. Researched competitors and built feature comparison charts for the product site and blog. Wrote page briefs for new landing pages, drafted a replacement App Store description, and worked on the brand in Figma. Every sales piece went through Product Marketing and Legal review."
+      },
+      {
+        "label": "The system",
+        "text": "Set up an intake form, an Asana board, and a weekly standup so every Sales request is tracked from backlog to delivery, across Sales, Design, SEO, and Legal."
+      },
+      {
+        "label": "The judgment",
+        "text": "Reviewed an eight-persona audience deck and flagged contradictions and unsupported claims. Wrote business cases for a G2 listing, a capped link-building pilot, and an AI visibility tracking tool trial."
+      }
+    ],
+    "quote": null,
+    "images": [],
+    "downloads": [],
+    "layout": "grid"
   }
 ]
