@@ -1,8 +1,8 @@
 [
   {
     "id": "the-connection",
-    "order": 1,
-    "eyebrow": "01 — Founder",
+    "order": 3,
+    "eyebrow": "03 — Founder",
     "title": "The Connection",
     "rows": [
       {
@@ -96,8 +96,8 @@
   },
   {
     "id": "abn",
-    "order": 3,
-    "eyebrow": "03 — Marketing Director",
+    "order": 4,
+    "eyebrow": "04 — Marketing Director",
     "title": "Aramaic Broadcasting Network",
     "rows": [
       {
@@ -125,8 +125,8 @@
   },
   {
     "id": "ai-visibility-outreach",
-    "order": 4,
-    "eyebrow": "04 — Work Sample",
+    "order": 5,
+    "eyebrow": "05 — Work Sample",
     "title": "AI-Visibility Audit Outreach",
     "rows": [
       {
@@ -158,8 +158,8 @@
   },
   {
     "id": "item-1795545004543",
-    "order": 5,
-    "eyebrow": "05 — GO-TO-MARKET (CONTRACT)",
+    "order": 1,
+    "eyebrow": "01 — Go-to-Market (Contract)",
     "title": "Keepr",
     "rows": [
       {
